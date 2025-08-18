@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>大国粮仓</title>
+	<link rel="icon" href="images/icon.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="nav.css">
+	<link rel="stylesheet" type="text/css" href="P1-2.css">
+	<link rel="stylesheet" type="text/css" href="P1-4.css">
+	<style>
+		body {
+			margin: 0
+		}
+
+		.neirong {
+			text-align: center;
+			max-width: 1400px;
+			padding: 20;
+			margin: 0 auto;
+		}
+
+		.info_mainzi {
+			width: 1400px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 23px;
+			clear: both;
+
+		}
+
+		.info_zi {
+			max-width: 350px;
+			padding: 15px;
+			background: rgba(255, 205, 142, 1.00);
+			border-radius: 10px;
+			font-size: 20px;
+			text-align: left;
+			letter-spacing: 2px;
+			word-spacing: 5px;
+			line-height: 1.5;
+
+		}
+
+		.info_image {
+			max-width: 1000px;
+			padding-bottom: 100px;
+			position: relative;
+		}
+		#part1 {
+			position: absolute;
+            top: 0;
+            left: 0;
+            width: 800px;
+            z-index: 1;
+        }
+        #part2 {
+            top: 0px;
+            left: 0px;
+            width: 750px;
+            z-index: 2;
+        }
+		.image-stack{
+			position: relative;
+			width: 100%;	
+		}
+		#part3 {
+			position: absolute;
+            top: 0.5px;
+            left: 200px;
+            width: 1000px;
+            z-index: 2;
+        }
+        #part4 {
+            top: 0px;
+            left: 0px;
+            width: 1000px;
+            z-index: 1;
+        }
+		
+	</style>
+</head>
+
+<body background="images/背景图.jpg">
+	<div class="nav">
+		<ul class="nav_main">
+			<li><a href="首页.html" target="_self">作品简介</a></li>
+			<li><a href="天.html" target="_self">天气与粮食</a></li>
+			<li><a href="地.html" target="_self">耕地与粮食</a></li>
+			<li><a href="人.html" target="_self">行为与粮食</a></li>
+			<li><a href="结语.html" target="_self">呼吁</a></li>
+		</ul>
+	</div>
+	<div class="neirong">
+		<div class="info_mainzi">
+			<p>&nbsp;</p>
+		  <p>理解天气对粮食的影响</p>
+			<p>首先要看其根源之一</p>
+			<p style="color:#D9730C">气候变化背后的碳排放 </p>
+		</div>
+		<div class="floating-image">
+		<div class="info_zi" style="float: right;clear:both; margin-bottom: 20px;">
+			<p>研究发现食物浪费产生的温室气体排放占全球总量<span style="color:#FF5400">8%-10%</span>，相当于航空业排放量的<span style="color:#FF5400">5倍</span>。与此同时，被浪费食物的可食用部分可为全球<span style="color:#FF5400">7.83亿</span>饥饿人口每人每天提供<span style="color:#FF5400">1.3</span>顿饭。</p>
+			</div></div>
+		<div class="info_image">
+			<img src="images/天2.png" width="80%" style="float: left;margin-left: 100px">
+		</div>
+		<div class="floating-image">
+		<div class="info_zi" style="float: right">
+			<p>具体到国家碳排放来看，中国、美国是全球碳排放前二的国家，但碳排放走势有所不同。中国碳排放量逐年上升，而美国反之。目前，中国还处于发展中国家，经济发展仍需要大量的煤炭能消耗，碳排放仍在增加。
+			</p>
+			</div></div>
+		<div class="info_mainzi">
+			<p>&nbsp;</p>
+			<p>碳排放驱动的大气候变暖直接表现为</p>
+			<p><span style="color: #D9730C">降水格局改变</span>和<span style="color: #D9730C">气温异常升高</span></p>
+			<p>而<span style="color: #D9730C">极端天气</span>对农业的负面影响也逐渐蔓延</p>
+		</div>
+		<div class="info_row" style="display: flex; align-items: center; justify-content: center;clear: both">
+			<div class="info_image" style="float: right">
+				<img id="part1" class="image-part" src="images/天3-图例.png" width="60%" >
+			    <img id="part2" class="circle-image" src="images/天3.png" width="60%" alt="旋转的圆形图片">
+		    </div>
+		    <div class="info_zi" style="flex: 1; margin-left: 70px;">
+			    <p>我国每年因气象灾害损失粮食数量巨大，在过去十年间，每年因气象灾害损失粮食大致在 550 - 650 亿斤之间波动。</p>
+		    </div>
+		</div>
+		<div class="image-stack">
+			<div class="floating-image"><img id="part3" class="image-top" src="images/天4-悬浮.png" width="70%" alt="浮动图片"></div>
+			<img id="part4" class="image-bottom" src="images/天4.png" width="70%">
+		</div>
+	  <div style="font-size: 20px"><p><strong style="color: #D9730C">2019 -
+		  2024年间</strong>，气象灾害在我国导致农作物受灾、人员伤亡与经济损失。</p>
+	  <p>暴雨洪涝、干旱等灾害占比各有起伏。</p>
+	  <p>这不仅警示着气候对农业生产的直接冲击，更深刻反映出气候因素在粮食安全层面的潜在损耗。</p>
+	  <p>我们必须高度重视气候对粮食的影响</p>
+	  <p>以应对气候变化、减轻灾害损失</p>
+		<p>筑牢粮食安全防线，守护人类赖以生存的根基。 </p></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+.circle-image {
+			border-radius: 50%;
+			/* 圆形效果 */
+			object-fit: cover;
+			/* 确保图片适应圆形 */
+			animation: rotate 30s linear infinite;
+			/* 动画：30秒/圈，匀速，无限循环 */
+		}
+
+		/* 定义旋转动画 */
+		@keyframes rotate {
+			from {
+				transform: rotate(0deg);
+				/* 起始角度 */
+			}
+
+			to {
+				transform: rotate(360deg);
+				/* 结束角度（顺时针一圈） */
+			}
+		}

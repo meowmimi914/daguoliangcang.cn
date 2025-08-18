@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+.image-bag{
+			position: relative;
+			width: 1400px;
+			 height: auto;
+			 margin: 0 auto;
+		}
+		.base-image{
+			display: block;
+			width: 100%;
+			height: auto;
+			
+		}
+		
+		#part11 {
+			position: absolute;
+            top: 55px;
+            left: -85px;
+            width: 755px;
+            z-index: 1;
+			
+			
+        }
+        #part12 {
+			position: absolute;
+            top: 155px;
+            left: 346px;
+            width: 755px;
+            z-index: 2;
+			
+        }
+		#part13 {
+			position: absolute;
+            top: 433px;
+            left: 630px;
+            width: 755px;
+            z-index: 3;
+			
+        }
+        #part14 {
+			position: absolute;
+            top: 702px;
+            left: 752px;
+            width: 755px;
+            z-index: 4;
+			
+        }
+		#part15 {
+			position: absolute;
+            top: 1029px;
+            left: 781px;
+            width: 755px;
+            z-index: 5;
+			
+        }
+        #part16 {
+			position: absolute;
+            top: 1339px;
+            left: 734px;
+            width: 755px;
+            z-index: 6;
+			
+        }
+		#part17 {
+			position: absolute;
+            top: 1556px;
+            left: 609px;
+            width: 755px;
+            z-index: 7;
+			
+        }
+        #part18 {
+			position: absolute;
+            top: 1709px;
+            left: 267px;
+            width: 755px;
+            z-index: 8;
+			
+        }
+		#part19 {
+			position: absolute;
+            top: 1740.5px;
+            left: -145px;
+            width: 755px;
+            z-index: 9;
+			
+        }
+		bag-part {
+    position: absolute;
+    width: 3%; /* 调整为原始大小的10%，你可以根据需要调整 */
+    height: auto;
+    transition: transform 0.3s ease; /* 添加平滑过渡效果 */
+    transform-origin: center center; /* 从中心放大 */
+}
+
+/* 鼠标悬停放大效果 */
+.bag-part:hover {
+    transform: scale(1.3); /* 放大1.5倍 */
+    z-index: 10; /* 确保放大时在最上层 */
+}

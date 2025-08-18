@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+img.spin {
+			 transform: scale(1.35); /* 放大1.35倍并旋转360度 */
+			 animation: spin 30s linear infinite; /* 动画：30秒/圈，匀速，无限循环 */
+		}
+		/* 定义旋转动画 */
+		@keyframes spin{
+      from {transform:scale(1.5) rotate(0deg); /* 起始角度 */
+      }
+      to {transform: scale(1.5) rotate(360deg); /* 结束角度（顺时针一圈） */
+      }
+		}
