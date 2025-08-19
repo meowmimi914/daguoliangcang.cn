@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>大国粮仓</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<link rel="icon" href="images/icon.png" type="image/png">
 	<link rel="stylesheet" type="text/css" href="nav.css">
 	<link rel="stylesheet" type="text/css" href="P1-2.css">
@@ -191,7 +192,7 @@
 			<div class="floating-image"><img id="part3" class="image-top" src="images/天4-悬浮.png" width="70%" alt="浮动图片"></div>
 			<img id="part4" class="image-bottom" src="images/天4.png" width="70%" loading="lazy">
 		</div>
-	  <div style="font-size: 20px"><p><strong style="color: #D9730C">2019 -
+	  <div class="info_mainzi" style="font-size: 20px"><p><strong style="color: #D9730C">2019 -
 		  2024年间</strong>，气象灾害在我国导致农作物受灾、人员伤亡与经济损失</p>
 	  <p>暴雨洪涝、干旱等灾害占比各有起伏</p>
 	  <p>这不仅警示着气候对农业生产的直接冲击，更深刻反映出气候因素在粮食安全层面的潜在损耗</p>
@@ -215,7 +216,25 @@
 			this.classList.toggle('zoomed');
 		});
 	</script>
-</body>
+	<script>
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					// 当元素进入视口时，添加动画类
+					entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+				} else {
+					// 当元素离开视口时，移除动画类以便下次再次触发
+					entry.target.classList.remove('animate__animated', 'animate__fadeInUp');
+				}
+			});
+		}, {
+			threshold: 0.1 // 元素可见10%时触发
+		});
 
+		// 获取所有需要应用动画的元素
+		const elementsToAnimate = document.querySelectorAll('.info_mainzi');
+		elementsToAnimate.forEach(el => observer.observe(el));
+	</script>
+</body>
 
 </html>

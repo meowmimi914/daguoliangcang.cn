@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>大国粮仓</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link rel="icon" href="images/icon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="nav.css">
 <link rel="stylesheet" type="text/css" href="P3-2.css">
@@ -154,14 +155,14 @@
 	  <p>有关机构估算</p>
 	  <p>每年损失浪费食物超 <em style="color:#FF5400">22.7%</em>&nbsp;</p>
 	  <p>&nbsp;约 <em style="color:#FF5400"> 9200 亿斤</em>&nbsp;</p>
-	  <p>&nbsp;挽回一半够 <em style="color:#FF5400">1.9 亿人</em> 吃一年</p>
+	 <p>&nbsp;挽回一半够 <em style="color:#FF5400">1.9 亿人</em> 吃一年</p>
 	  <p>餐饮浪费更是全球性问题</p>
 	  <p>联合国粮农组织报告显示全世界每年浪费食物达 <em style="color:#FF5400">13 亿吨</em>&nbsp;</p>
 		<p>&nbsp;占粮食生产总量 <em style="color:#FF5400">约三分之一</em></p>
 	  <p>&nbsp;</p>
 		<p>&nbsp;</p>
 <p><strong style="color:#D9730C">粮食关乎人类生存发展</strong></p>
-		<p><strong style="color:#D9730C">全球正面临严峻的食物浪费挑战 </strong> </p>
+	<p><strong style="color:#D9730C">全球正面临严峻的食物浪费挑战 </strong> </p>
 	  </div>
 		<div class="zoom-toggle">
 			<img id="img1" src="images/人1.png" width="70%" style="transition: all 1s ease; /* 平滑过渡效果 */
@@ -184,7 +185,7 @@
 		</div>
 	</div>
 	<div class="info_mainzi">
-		<div class="scroll-container">
+		<div class="scroll-container" style="text-align: center">
       <div class="text-line"><p>在触目惊心的粮食浪费数据背后</p></div>
       <div class="text-line"><p>从生产到消费各环节的浪费种类</p></div>
       <div class="text-line"><p>正勾勒出亟待关注的损耗图谱——收割遗落、仓储霉变、加工丢弃、餐桌剩余</p></div>
@@ -206,9 +207,9 @@
 			</div>
 		</div>
 		<div class="info_mainzi">
-			<p><strong>面对浪费的消耗，人类并非束手无策</strong></p>
-            <p><strong style="color:#D9730C">官方的宣传、立法、政策与制度</strong></p>
-            <p><strong>正是我们主动塑造粮食系统未来的核心工具 </strong></p>
+			<p><strong>面对浪费的消耗，人类并非束手无策</strong></p></div>
+            <div class="info_mainzi"><p><strong style="color:#D9730C">官方的宣传、立法、政策与制度</strong></p></div>
+            <div class="info_mainzi"><p><strong>正是我们主动塑造粮食系统未来的核心工具 </strong></p>
             <p>&nbsp;</p>
 	</div>
 		<div style="display: flex; align-items: center; justify-content: center; padding: 20px 0;">
@@ -273,6 +274,24 @@
 });
 	
 </script>
+	<script>
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					// 当元素进入视口时，添加动画类
+					entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+				} else {
+					// 当元素离开视口时，移除动画类以便下次再次触发
+					entry.target.classList.remove('animate__animated', 'animate__fadeInUp');
+				}
+			});
+		}, {
+			threshold: 0.1 // 元素可见10%时触发
+		});
+
+		// 获取所有需要应用动画的元素
+		const elementsToAnimate = document.querySelectorAll('.info_mainzi');
+		elementsToAnimate.forEach(el => observer.observe(el));
+	</script>
 </body>
 </html>
-
