@@ -9,7 +9,7 @@
 		
         .image-part {
             position: absolute;
-            /*transition: transform 0.3s ease; /* 平滑放大动画 */
+            transition: transform 0.3s ease; /* 平滑放大动画 */
             /*transform-origin: center bottom; /* 从底部中心放大 */
         }
         
@@ -45,8 +45,8 @@
             z-index: 5;
         }
         /* 悬停放大效果 */
-        /*.image-part:hover {
+        .image-part:hover {
             transform: scale(1.15);
             z-index: 10 !important; /* 确保放大时在最上层 */
-            /*filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); /* 可选：添加阴影增强立体感 */
-        /*}
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); /* 可选：添加阴影增强立体感 */
+        }
