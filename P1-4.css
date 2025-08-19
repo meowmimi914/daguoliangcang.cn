@@ -8,7 +8,7 @@
 				transform: translateY(0); /* 起始和结束位置 */
 			}
 			50% {
-				transform: translateY(-20px); /* 向上浮动 */
+				transform: translateY(-14px); /* 向上浮动 */
 			}
 		}
 

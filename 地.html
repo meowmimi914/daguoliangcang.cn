@@ -8,6 +8,7 @@
 	<link rel="icon" href="images/icon.png" type="image/png">
 	<link rel="stylesheet" type="text/css" href="nav.css">
 	<link rel="stylesheet" type="text/css" href="P1-4.css">
+	<link rel="stylesheet" type="text/css" href="enlarge.css">
 	<style>
 		body {
 			margin: 0
@@ -40,6 +41,13 @@
 			word-spacing: 5px;
 			line-height: 1.5;
 
+		}
+		.img1{
+			display: flex;
+			justify-content: center;
+		}
+		.img1 img11{
+			width: 80%;
 		}
 
 		.zoom-toggle {
@@ -88,6 +96,51 @@
 		.inner:hover span {
 			color: rgba(255, 255, 255, 0);
 		}
+		.main{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.item{
+			position: relative;
+			width: 300px;
+			height: 130px;
+			margin: 30px;
+			margin-bottom: 80px;
+			background:url("images/bottom.jpg");
+			border-radius: 20%;
+			box-shadow: inset 0 0 0 6px rgba(255,255,255,0.6),0 1px 2px rgba(0,0,0,0.1);
+			transition: all 0.4s ease-in-out;
+		}
+		.info{
+			opacity: 0;
+			transform: scale(0);
+			position: absolute;
+			width: 300px;
+			height: 130px;
+			background: #c86818;
+			border-radius: 20%;
+			transition: all 0.4s ease-in-out;
+		}
+		.info p{
+			height: 90px;
+			font-size: 30px;
+			color: #FFFFFF;
+			margin: 0 0px;
+			padding-top: 50px;
+			left: 50px;
+			text-transform: uppercase;
+		}
+		.item:hover{
+			box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1),0 1px 2px rgba(0,0,0,0.1);
+			
+		}
+		.item:hover .info{
+			opacity: 1;
+			transform: scale(1);
+		}
 	</style>
 </head>
 
@@ -108,27 +161,34 @@
 			<p style="color: rgba(177,103,41,1.00)"><strong>“守护耕地就是守护人类的生命线”</strong></p>
 			<p><strong>全球耕地面积分布不均，美国、印度、中国、俄罗斯等国位居前列。</strong></p>
 		</div>
-		<div style="position: relative; width: 100%; height: 0; padding-top: 56.2225%;
+		<div class="img1" style="position: relative; width: 100%; height: 0; padding-top: 56.2225%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
  border-radius: 8px; will-change: transform;">
-			<iframe loading="lazy"
+			<iframe class="img11" loading="lazy"
 				style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
 				src="https://www.canva.com/design/DAGwVwBtOF0/4iUfPTA3bfpUm5WC91E-UQ/view?embed"
 				allowfullscreen="allowfullscreen" allow="fullscreen">
 			</iframe>
 		</div>
 		<div style="display: flex; align-items: center; justify-content: center; padding: 20px 0;">
-			<div style="flex: 1; text-align: center;">
-				<img src="images/地-地图上.png" style="width: 90%;" loading="lazy">
+			<div class="zoom-toggle" style="flex: 1; text-align: center;">
+				<img src="images/地-地图上.png"  style="width: 90%;transition: all 1s ease; /* 平滑过渡效果 */
+    cursor: pointer;" onclick="this.classList.toggle('enlarged')" loading="lazy">
 			</div>
 			<div class="info_zi" style="flex: 1; margin-left: 20px;">
 				<p>数据显示，近十年间，尽管部分国家如印度、中国通过政策手段实现耕地面积小幅增长，但全球耕地扩张整体放缓，乌克兰等受冲突影响国家耕地面积更是急剧缩减。</p>
 			</div>
 		</div>
+	  <div class="floating-image" style="line-height: 0.2">
+			<p style="font-family:Inter;font-weight:400;font-style:normal;letter-spacing:4.3px;color:rgba(186, 156, 124, 1);font-size:25px">↑</p>
+			<span
+					style="font-family:Inter;font-weight:400;font-style:normal;letter-spacing:4.3px;color:rgba(186, 156, 124, 1);font-size:25px">点击图片放大</span>
+			</div>
 		<div class="info_mainzi">
+			<p>&nbsp;</p>
 			<p><strong>然而有地不等于有粮</strong></p>
-			<p style="color: rgba(177,103,41,1.00)"><strong>耕地的数量最终要转化为粮食的产量</strong></p>
-		</div>
+<p style="color: rgba(177,103,41,1.00)"><strong>耕地的数量最终要转化为粮食的产量</strong></p>
+	  </div>
 		<div class="info_image">
 			<img src="images/地2.png" width="1000px" loading="lazy">
 		</div>
@@ -136,31 +196,40 @@
 			<div class="inner">
 				<span>i</span>
 				<h3>查看详细数据图</h3>
-				<a href="P2-12.html" target="_blank">
-					<p>图右点击此处</p>
-				</a>
+			
 				<a href="P2-11.html" target="_blank">
 					<p>图左点击此处</p>
 				</a>
+				<a href="P2-12.html" target="_blank">
+					<p>图右点击此处</p>
+				</a>
 			</div>
 		</div>
-		<div>
-			<img src="images/地3.png" width="80%" loading="lazy">
+		<div class="zoom-toggle">
+			<img src="images/地3.png" width="80%" style="transition: all 1s ease; /* 平滑过渡效果 */
+    cursor: pointer;" onclick="this.classList.toggle('enlarged')" loading="lazy">
 		</div>
+		<div class="floating-image" style="line-height: 0.2">
+			<p style="font-family:Inter;font-weight:400;font-style:normal;letter-spacing:4.3px;color:rgba(186, 156, 124, 1);font-size:25px">↑</p>
+			<span
+					style="font-family:Inter;font-weight:400;font-style:normal;letter-spacing:4.3px;color:rgba(186, 156, 124, 1);font-size:25px">点击图片放大</span>
+			</div>
 		<div class="info_mainzi">
+			<p>&nbsp;</p>
 			<p><strong>在粮食产量的基础上</strong></p>
-			<p style="color: rgba(177,103,41,1.00)"><strong>中国农产品产量持续攀高</strong></p>
+<p style="color: rgba(177,103,41,1.00)"><strong>中国农产品产量持续攀高</strong></p>
 			<p><strong>多元品类的产量数据勾勒出鲜活图景</strong></p>
 		</div>
-		<div class="info_image">
-			<img class="zoom-toggle" src="images/地4.png" width="80%" onclick="this.classList.toggle('enlarged')" style="transition: all 1s ease; /* 平滑过渡效果 */
+		<div class="zoom-toggle">
+			<img  src="images/地4.png" width="80%" onclick="this.classList.toggle('enlarged')" style="transition: all 1s ease; /* 平滑过渡效果 */
     cursor: pointer;" loading="lazy">
 			<div class="floating-image"><span
 					style="font-family:Inter;font-weight:400;font-style:normal;letter-spacing:4.3px;color:rgba(186, 156, 124, 1);font-size:25px">点击图片放大</span>
 			</div>
 		</div>
-		<div class="info_image">
-			<img src="images/地5.png" width="70%" loading="lazy">
+		<div class="zoom-toggle">
+			<img src="images/地5.png"  width="70%" style="transition: all 1s ease; /* 平滑过渡效果 */
+    cursor: pointer;" onclick="this.classList.toggle('enlarged')" loading="lazy">
 		</div>
 		<div class="floating-image">
 			<div class="inner">
@@ -171,17 +240,36 @@
 				</a>
 			</div>
 		</div>
-		<div class="info_image">
-			<img src="images/地6.png" width="65%" style="float: right" loading="lazy">
+		<div class="zoom-toggle">
+			<img src="images/地6.png" width="65%" style="float: right;transition: all 1s ease; /* 平滑过渡效果 */
+    cursor: pointer;" onclick="this.classList.toggle('enlarged')" loading="lazy">
 		</div>
 		<div class="info_zi" style="flex: 1; margin-left: 0px;">
 			<p>全球范围内，粮食安全问题依然是一个引人关注的重大挑战。数据显示，非洲地区的粮食不足率和中度或重度粮食不安全人口比例分别高达21%和57.5%。这一现象是对全球粮食安全依然存在严重问题的一种显著反应。</p>
 		</div>
+		<div class="floating-image" style="line-height: 0.2">
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<span
+					style="font-family:Inter;font-weight:400;font-style:normal;letter-spacing:4.3px;color:rgba(186, 156, 124, 1);font-size:25px">点击图片放大→</span>
+			</div>
+		<div class="floating-image">
+		<div class="main">
+			<div class="item">
+				<div class="info">
+			<a href="index.html#jump" style="text-decoration: none">
+				    
+	      <p>返回首页</p></a></div>
+		  </div>
+		  </div>
+		</div>
 	</div>
 	<script>
-		document.querySelector('.zoom-toggle').addEventListener('click', function () {
-			this.classList.toggle('zoomed');
-		});
+		document.querySelectorAll('.zoom-toggle').forEach(function(img) {
+  img.addEventListener('click', function() {
+    this.classList.toggle('zoomed'); // 切换 zoomed 类
+  });
+});
 	</script>
 </body>
 

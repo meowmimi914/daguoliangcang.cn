@@ -9,9 +9,11 @@
 			float: left;
 			clear: both;
 			margin-left: 100px;
+			text-align: justify;
 			
 		}
 		.footer_right{
 			float: right;
 			margin-right: 100px;
+			text-align: justify;
 		}

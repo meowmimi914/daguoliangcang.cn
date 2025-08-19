@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+.zoom-toggle {
+			cursor: pointer;
+			transition: transform 0.3s ease;
+			/* 动画效果 */
+		}
+
+		.zoom-toggle.zoomed {
+			transform: scale(1.20);
+			/* 放大倍数 */
+			z-index: 10;
+			/* 避免被其他元素遮挡 */
+		}

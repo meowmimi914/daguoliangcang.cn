@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="footer.css">
 <link rel="stylesheet" type="text/css" href="P1-effect1.css">
 <link rel="stylesheet" type="text/css" href="P1-4.css">
+<link rel="stylesheet" type="text/css" href="enlarge.css">
 	<style>
 		body{
 			margin: 0;
@@ -20,6 +21,7 @@
 			padding:20;
 			margin:0 auto;
 			line-height: 1.9;
+			text-align: justify;
 		}
 		.info_zi {
 			max-width: 350px;
@@ -64,22 +66,24 @@
 	</ul>
 	
 	</div>
+	<p>&nbsp;</p>
 	<div class="main_image">
-		<img src="images/1.jpg" style="1200px">
+		<img src="images/1.jpg" style="width:1200px" loading="lazy">
 	</div>
 	<div class="zywz">
 		<div class="zi_left">
-	  <p>“洪范八政，食为政首。” 粮食，作为人类生存的基石，其安&nbsp; &nbsp; 全问题始终是关系国计民生的头等大事。根据FAO报告显示，目前全球有超过七亿人面临饥饿，而食物浪费占总产量的约30%，减少浪费是解决粮食安慰问题的关键途径。如果世界粮食减损一个百分点，按每人一年400公斤粮食计算，可以养活约7000万人。&nbsp;</p>
-	  <p>在当今复杂多变的时代背景下，我国粮食安全正面临着来自气候、耕地以及人类行为等多方面的严峻挑战。&nbsp;</p>
+	  <p>“洪范八政，食为政首。” 粮食，作为人类生存的基石，其安全问题始终是关系国计民生的头等大事。根据FAO报告显示，目前全球有超过七亿人面临饥饿，而食物浪费占总产量的约30%，减少浪费是解决粮食安慰问题的关键途径。如果世界粮食减损一个百分点，按每人一年400公斤粮食计算，可以养活约7000万人。</p>
+	  <p>在当今复杂多变的时代背景下，我国粮食安全正面临着来自气候、耕地以及人类行为等多方面的严峻挑战。</p>
 		</div>
 		<div class="zi_right">
 			<p>本作品通过 “气候——耕地——行为”（天地人）这一独特的三维视角，深入透视中国粮食安全现状。借助Python、八爪鱼等数据挖掘和分析工具，搜集数据全面剖析现状。作品架构方面，通过“【天】从气候看粮食损耗”、“【地】从耕地看粮食供给”、“【人】人为行动对粮食浪费的影响”三部分内容，可视化呈现粮食问题。希望通过我们的努力，能够唤起更多人对粮食安全问题的关注，凝聚全社会的力量，共同守护好我们的 “大国粮仓”，让每一粒粮食都能物尽其用，让 14 亿中国人的饭碗端得更稳、更牢。 </p>
 		</div>
-		<div class="info_image" style="width: 1200px">
-		<img src="images/首页1.png" width="80%" style="margin-bottom: 200px"></div>
+		<div class="zoom-toggle" style="width: 1200px;transition: all 1s ease; /* 平滑过渡效果 */
+    cursor: pointer;" onclick="this.classList.toggle('enlarged')">
+		<img src="images/首页1.png" width="80%" style="margin-bottom: 200px" loading="lazy"></div>
 	
 	<div class="right-image" style="float: left;clear: both;margin-left: 150px;margin-bottom: 280px;">
-		<img src="images/首页2.png" width="500px">
+		<img src="images/首页2.png" width="500px" loading="lazy">
 	</div>
 	<div class="info_zi" style="float: left;margin-left: 150px;margin-top: 130px">
 		<p>2020年各国粮食总浪费量与人均浪费量的惊人数据，正以触目惊心的方式警示着我们:粮食安全与粮食损耗始终是最值得关注的焦点之一！而粮食问题的背后，是多重因素交织的复杂图景——气候的无常、耕地的变迁、人为行动的失当，都在深刻影响着粮食的命运。</p>
@@ -87,13 +91,13 @@
 
     
 
-	<div class="info_mainzi" style="text-align: center;width: 1200px;float: none;position: absolute;top: 2400px">
+	<div class="info_mainzi" style="text-align: center;width: 1200px;float: none;position: absolute;top: 2650px">
 		<span style="font-family:Inter;font-weight:400;font-style:normal;letter-spacing:4.3px;color:rgba(186, 156, 124, 1);font-size:23px">点击从“天地人”三维视角透析中国粮食安全现状</span>
 		<p style="font-family:Inter;font-weight:400;font-style:normal;letter-spacing:4.3px;color:rgba(186, 156, 124, 1);font-size:23px">↓</p>
 	</div>
 		</div>
 <div class="floating-image">
-  <div class="main">
+  <div class="main" id="jump">
 	<div class="item">
 			<div class="info"><a href="天.html" style="text-decoration: none">
 				<h3>从气候看粮食损耗</h3>
@@ -138,6 +142,14 @@
 			<p>Python、Excel、Adobe photoshop、AdobeDreamweaver、八爪鱼、flourish、即梦AI</p>
 		</div>
 	</div>
+	<script>
+				document.querySelectorAll('.zoom-toggle').forEach(function(img) {
+  img.addEventListener('click', function() {
+    this.classList.toggle('zoomed'); // 切换 zoomed 类
+  });
+});
+	
+</script>
 </body>
 </html>
 
